@@ -1,0 +1,36 @@
+<view class='content'>
+  <image class='img' mode='scaleToFill' src='../../img/newtrs_table4.png'></image>
+
+  <view class='view1'>
+    转运人
+  </view>
+  <view class='view2' bindtap='selectPerson' data-type='transferName' >
+    {{transferName}}
+  </view>
+
+  <view class='view1'>
+    科室协调员
+  </view>
+  <view class='view2' bindtap='selectPerson' data-type='contactName' >
+     {{contactName}}
+  </view>
+
+  <view class='view3'>
+  </view>
+
+
+  <view class='view1'>
+    OPO人员
+  </view>
+  <view class='view2' bindtap='selectPerson' data-type='opoContactName' >
+    {{opoContactName}}
+  </view>
+
+
+  <view class='foot'>
+    <view class='pre' bindtap='clickPre'>上一步</view>
+    <view class='next' bindtap='clickNext'>下一步</view>
+  </view>
+
+
+</view>

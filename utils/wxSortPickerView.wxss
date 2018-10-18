@@ -1,0 +1,47 @@
+.wxSortPickerViewTemTags {
+  position: fixed;
+  top: 20rpx;
+  right: 20rpx;
+   /* background-color: #fff;  */
+  color: #050505;
+}
+
+.wxSortPickerViewTemTag {
+  text-align: center;
+  padding: 6rpx;
+  font-size: 24rpx;
+}
+
+.wxSortPickerViewFixedTag {
+  position: fixed;
+  width: 100%;
+}
+
+.wxSortPickerViewTag {
+  margin-left: 32rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #f72361;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 10rpx;
+}
+
+.wxSortPickerViewItem {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+  padding-left: 32rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  color: #050505;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.wxSortPickerViewItem_img{
+  width:60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}

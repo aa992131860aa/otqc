@@ -1,0 +1,18 @@
+<view class='content'>
+
+  <view class='line1'>
+    <view class='line1_font'>温度示警 </view>
+    <switch color='#1d4499' class='line1_switch' bindchange="tChange"  checked="{{temperatureStatus==0?true:false}}"  />
+  </view>
+  <view class='line'></view>
+  <view class='line2'>
+    <view class='line1_font'>开箱提醒</view>
+    <switch checked color='#1d4499' class='line1_switch' bindchange="oChange" checked='{{openStatus==0?true:false}}' />
+  </view>
+  <view class='line'></view>
+  <view class='line3'>
+    <view class='line1_font'>碰撞提醒</view>
+    <switch checked color='#1d4499' class='line1_switch' bindchange="cChange" checked='{{collisionStatus==0?true:false}}' />
+  </view>
+  <view class='line'></view>
+</view>

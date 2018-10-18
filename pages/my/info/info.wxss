@@ -1,0 +1,46 @@
+.view1 {
+  margin-top: 30rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.view1_text {
+  font-size: 32rpx;
+  color: #050505;
+  margin-left: 32rpx;
+}
+
+.view1_img {
+  border-radius: 50%;
+  float: right;
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+  margin-right: 32rpx;
+}
+
+.view2 {
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.view2_text {
+  font-size: 32rpx;
+  color: #050505;
+  margin-left: 32rpx;
+}
+
+.view2_text1 {
+  float: right;
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 32rpx;
+}
+.line{
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  height: 1rpx;
+  background-color: #d7d7d7;
+}

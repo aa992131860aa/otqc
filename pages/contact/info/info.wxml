@@ -1,0 +1,43 @@
+<view class='content'>
+
+  <view class='view1'>
+
+    <image mode='scaleToFill' class='view1_img' src='{{wechatUrl}}'></image>
+    <text class='view1_text'>{{trueName}}</text>
+  </view>
+  <view style='background-color:#fff'>
+
+    <!-- <view class='view2'>
+      <text class='view2_text'>姓名</text>
+      <text class='view2_text1'>{{trueName}}</text>
+    </view>
+    <view class='line'></view> -->
+
+    <view class='view2'>
+      <text class='view2_text'>手机</text>
+      <text class='view2_text1'>{{phone}}</text>
+    </view>
+    <view class='line'></view>
+
+    <view class='view2'>
+      <text class='view2_text'>所属医院</text>
+      <text class='view2_text1'>{{hospitalName}}</text>
+    </view>
+    <view class='line'></view>
+
+
+    <view class='view2'>
+      <text class='view2_text'>职位</text>
+      <text class='view2_text1'>{{roleName}}</text>
+    </view>
+
+  </view>
+
+  <view class='line3' hover-class='line3_hover' bindtap='callClick'>
+    <image class='create_img' mode='scaleToFill' src='../../img/cloud_1index_phone.png'> </image>
+
+    <view class='create_font'>拨号</view>
+
+  </view>
+
+</view>

@@ -1,0 +1,5 @@
+<view class='content'>
+ 
+   <textarea class='feedback'  maxlength='-1' bindinput='feedbackContent'  auto-focus />
+ <view class='line2' bindtap='feedback'>提交反馈</view>
+</view>  

@@ -1,0 +1,131 @@
+<view class="phone_one">
+  <view class='line0' bindtap="clickTime">
+
+    <view class="phone_personal">{{time}}</view>
+    <image src="../../img/cloud_2lishi_down.png" class="personal_image {{selectTime ? 'rotateRight' :''}}"></image>
+
+
+  </view>
+
+  <view class='line'></view>
+
+
+  <view class='line0' bindtap="clickOrgan">
+    <view class="phone_personal">{{organ}}</view>
+    <image src="../../img/cloud_2lishi_down.png" class="personal_image {{selectOrgan ? 'rotateRight' :''}}"></image>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='line0' bindtap="clickAll">
+    <view class="phone_personal">{{all}}</view>
+    <image src="../../img/cloud_2lishi_down.png" class="personal_image {{selectAll ? 'rotateRight' :''}}"></image>
+  </view>
+
+  <view class='line'></view>
+
+
+  <view class='line0' bindtap="clickStart">
+
+    <view class="phone_personal">{{start}}</view>
+    <image src="../../img/cloud_2lishi_down.png" class="personal_image {{selectStart ? 'rotateRight' :''}}"></image>
+  </view>
+</view>
+
+<view class="person_box">
+  <view class="phone_select" hidden="{{selectTime}}">
+    <view>
+      <view class='time1 {{startTimeStatus?"time1_select":"time1_unselect"}}'>
+        <picker mode="date" value="{{date}}" bindchange="startDateChange">
+          <view class="picker">
+            {{startDate}}
+          </view>
+        </picker>
+        <image class='time1_img' bindtap='startImg' mode='scaleToFill' src='../../img/login_close.png'></image>
+      </view>
+
+      <view class='time2 {{endTimeStatus?"time1_select":"time1_unselect"}}'>
+        <picker mode="date" value="{{date}}" bindchange="endDateChange">
+          <view class="picker">
+            {{endDate}}
+          </view>
+        </picker>
+        <image class='time2_img' bindtap='endImg' mode='scaleToFill' src='../../img/login_close.png'></image>
+      </view>
+    </view>
+    <view class='btn_time' bindtap='btnTime'>确定</view>
+  </view>
+</view>
+
+<view class="person_box">
+  <view class="phone_select" hidden="{{selectOrgan}}">
+    <view class="select_one" bindtap="organSelect" data-me="全部">全部</view>
+    <view class="select_one" bindtap="organSelect" data-me="心脏">心脏</view>
+    <view class="select_one" bindtap="organSelect" data-me="肝脏">肝脏</view>
+    <view class="select_one" bindtap="organSelect" data-me="肺">肺</view>
+    <view class="select_one" bindtap="organSelect" data-me="肾脏">肾脏</view>
+    <view class="select_one" bindtap="organSelect" data-me="胰脏">胰脏</view>
+    <view class="select_one" bindtap="organSelect" data-me="眼角膜">眼角膜</view>
+    <view></view>
+  </view>
+</view>
+
+<view class="person_box">
+  <view class="phone_select" hidden="{{selectAll}}">
+    <view class="select_one" bindtap="allSelect" data-me="全部">全部</view>
+    <view class="select_one" bindtap="allSelect" data-me="待完善">待完善</view>
+    <view class="select_one" bindtap="allSelect" data-me="已完善">已完善</view>
+
+    <view></view>
+  </view>
+</view>
+
+<view class="person_box">
+  <view class="phone_select" hidden="{{selectStart}}">
+    <view class="select_one" bindtap="startSelect" data-me="全部">全部</view>
+
+    <view wx:for="{{startList}}">
+      <view class="select_one" bindtap="startSelect" data-me="{{item}}">{{item}}</view>
+    </view>
+
+  </view>
+</view>
+
+<view class='content' bindtap='content'>
+  <view wx:for="{{list}}">
+    <view class='item'>
+      <image style='display:{{item.autoTransfer==1?"block":"none"}}' class='item_img' mode='scaleToFill' src='../../img/cloud_index_imperfect.png'></image>
+
+      <view class='line1'>
+        <view class='line1_font'>{{item.modifyOrganSeg==""?item.modifyOrganSeg:item.organSeg}}</view>
+        <image class='line1_img' mode='scaleToFill' src='../../img/{{item.autoTransfer==1?"cloud_1index_auto":"cloud_1index_auto_black"}}.png'></image>
+        <view class='line1_font1'>{{item.date}}</view>
+      </view>
+
+      <view class='line2'>
+        <view class='line2_font'>{{item.city}}</view>
+        <image class='line2_img' mode='scaleToFill' src='../../img/cloud_2lishi_arrow.png'></image>
+        <view class='line2_font1'>{{item.city1}}</view>
+        <view class='line2_font2'>共{{item.distance}}km</view>
+        <view class='line2_font3'>{{item.organ}}</view>
+        <view class='line2_font4'>{{item.blood}}</view>
+      </view>
+
+      <view class='line3'>
+        <image src='../../img/cloud_2lishi_yun.png' class='line3_img' mode='scaleToFill'></image>
+        <view class='line3_font'>{{item.trueName}}</view>
+        <view class='line3_font1'>{{item.phone}}</view>
+        <view class='line3_font3'>{{item.contactName}}</view>
+        <view class='line3_font2'>{{item.contactPhone}}</view>
+
+        <image src='../../img/cloud_2lishi_xie.png' class='line3_img1' mode='scaleToFill'></image>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class='no_content' style='display:{{noContent==true?"block":"none"}}'>
+  <image class='no_content_img' mode='scaleToFill' src='../../img/cloud_emoji.png'></image>
+  <view class='no_content_font'>暂无转运</view>
+</view>

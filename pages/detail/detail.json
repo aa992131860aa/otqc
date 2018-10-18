@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "转运监控",
+    "usingComponents": {
+      "ec-canvas": "../../ec-canvas/ec-canvas"
+    }
+}

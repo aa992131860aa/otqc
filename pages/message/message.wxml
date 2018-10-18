@@ -1,0 +1,16 @@
+<view class='content'>
+  <view class='line1' hover-class='line1_hover' bindtap='skipContact'>
+    <image class='link_img' mode='scaleToFill' src='../img/msg_2list_linkman.png'> </image>
+    <view class='link_font'>联系人</view>
+  </view>
+  <view class='line1' hover-class='line1_hover' bindtap='skipTransfer'>
+    <image class='link_img' mode='scaleToFill' src='../img/msg_1index_team.png'> </image>
+    <view class='link_font'>转运组</view>
+  </view>
+  <view class='line3' hover-class='line3_hover' bindtap='addClick'>
+    <image class='create_img' mode='scaleToFill' src='../img/cloud_addren.png'> </image>
+
+    <view class='create_font'  >添加联系人</view>
+
+  </view>
+</view>

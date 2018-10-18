@@ -1,0 +1,161 @@
+<view class='content'>
+
+  <view class='view1'>
+    <text class='view1_text'>团队信息</text>
+    <image class='view1_img' mode='scaleToFill' src='../../img/cloud_3xinxi_right.png'></image>
+    <text class='view1_text1'>{{teamList.length}}人</text>
+  </view>
+
+  <view class='view2'></view>
+  <view class='view3'>
+
+    <block wx:for="{{teamList}}">
+      <view class='view4'>
+      <view class='view4_text2' style='display:{{index<3?"block":"none"}};width:{{item.flag.length>1?item.flag.length*24:36}}rpx;border-radius:{{item.flag.length>1?"8rpx":"50%"}}'>{{item.flag}}</view>
+        <image mode='scaleToFill' src='{{item.wechatUrl}}' class='view4_img'></image>
+        <view class='view4_text'>{{item.trueName}}</view>
+      </view>
+    </block>
+
+    <view class='view4'>
+      <image mode='scaleToFill' bindtap='add' src='../../img/cloud_3xinxi_add.png' class='view4_img1'></image>
+      <view class='view4_text1'></view>
+    </view>
+
+    <view class='view4'>
+      <image mode='scaleToFill' bindtap='minus' src='../../img/cloud_3xinxi_minus.png' class='view4_img1'></image>
+      <view class='view4_text1'> </view>
+    </view>
+
+
+  </view>
+
+  <view class='view5'></view>
+
+  <view class='view6'></view>
+
+  <view class='view1' bindtap='shrink' data-info='baseInfo'>
+    <text class='view1_text'>基本信息</text>
+    <image class='view1_img' mode='scaleToFill' src='../../img/cloud_3xinxi_right.png'></image>
+
+  </view>
+  <view class='view2'></view>
+  <view class='view7' style='display:{{baseInfo==true?"block":"none"}}'>
+    <view class='view8'>
+      <text class='view8_text'>器官箱号</text>
+      <text class='view8_text1'>{{boxNo}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>器官段号</text>
+      <text class='view8_text1'>{{modifyOrganSeg}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>获取时间</text>
+      <text class='view8_text1'>{{getTime}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>开箱密码</text>
+      <text class='view8_text1'></text>
+    </view>
+  </view>
+  <view class='view6'></view>
+
+
+
+  <view class='view1' bindtap='shrink' data-info='organInfo'>
+    <text class='view1_text'>器官信息</text>
+    <image class='view1_img' mode='scaleToFill' src='../../img/cloud_3xinxi_right.png'></image>
+
+  </view>
+  <view class='view2'></view>
+  <view class='view7' style='display:{{organInfo==true?"block":"none"}}'>
+    <view class='view8'>
+      <text class='view8_text'>器官种类</text>
+      <text class='view8_text1'>{{organ}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>器官数量</text>
+      <text class='view8_text1'>{{organNum}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>血型</text>
+      <text class='view8_text1'>{{blood}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>血液样本数量</text>
+      <text class='view8_text1'>{{bloodNum}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>组织样本</text>
+      <text class='view8_text1'>{{sample}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>组织样本数量</text>
+      <text class='view8_text1'>{{sampleNum}}</text>
+    </view>
+  </view>
+  <view class='view6'></view>
+
+
+
+  <view class='view1' bindtap='shrink' data-info='transferInfo'>
+    <text class='view1_text'>转运信息</text>
+    <image class='view1_img' mode='scaleToFill' src='../../img/cloud_3xinxi_right.png'></image>
+
+  </view>
+  <view class='view2'></view>
+  <view class='view7' style='display:{{transferInfo==true?"block":"none"}}'>
+    <view class='view8'>
+      <text class='view8_text'>起始地</text>
+      <text class='view8_text1'>{{fromCity}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>目的地</text>
+      <text class='view8_text1'>{{hospitalName}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>转运方式</text>
+      <text class='view8_text1'>{{method}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>航班/车号</text>
+      <text class='view8_text1'>{{no}}</text>
+    </view>
+  </view>
+  <view class='view6'></view>
+
+
+
+
+  <view class='view1' bindtap='shrink' data-info='otherInfo'>
+    <text class='view1_text'>其他信息</text>
+    <image class='view1_img' mode='scaleToFill' src='../../img/cloud_3xinxi_right.png'></image>
+
+  </view>
+  <view class='view2'></view>
+  <view class='view7' style='display:{{otherInfo==true?"block":"none"}}'>
+    <view class='view8'>
+      <text class='view8_text'>获取组织</text>
+      <text class='view8_text1'>{{hospitalName}}OPO</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>OPO姓名</text>
+      <text class='view8_text1'>{{opoContactName}}</text>
+    </view>
+    <view class='view8'>
+      <text class='view8_text'>OPO电话</text>
+      <text class='view8_text1'>{{opoContactPhone}}</text>
+    </view>
+
+  </view>
+  <view class='view9'></view>
+
+
+  <view class='foot'>
+    <view class='pre' bindtap='clickPre'>上一步</view>
+    <view class='next' bindtap='clickNext'>完成</view>
+  </view>
+
+</view>
+
+

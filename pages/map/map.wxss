@@ -1,0 +1,172 @@
+.content {
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+  box-shadow: 0 0 10rpx 0 #e9ecf3;
+}
+
+.info {
+  width: 100%;
+  background-color: #fff;
+}
+
+.line1 {
+  text-align: center;
+  height: 34rpx;
+}
+
+.line1_img {
+  width: 40rpx;
+  height: 14rpx;
+}
+
+.line2 {
+  height: 50rpx;
+  margin-top: 10rpx;
+  line-height: 50rpx;
+}
+
+.line2_font {
+  float: left;
+  font-size: 32rpx;
+  margin-left: 60rpx;
+  color: #050505;
+}
+
+.line2_font1 {
+  float: left;
+  height: 4rpx;
+  margin-top: 23rpx;
+  width: 80rpx;
+  background-color: #050505;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.line2_font2 {
+  float: left;
+  font-size: 32rpx;
+  color: #050505;
+}
+
+.line3 {
+  height: 50rpx;
+  margin-top: 10rpx;
+  line-height: 50rpx;
+}
+
+.line3_font {
+  font-size: 24rpx;
+  margin-left: 60rpx;
+  color: #999;
+}
+
+.line3_font1 {
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  color: #999;
+}
+
+.line4 {
+  margin-top: 16rpx;
+  height: 4rpx;
+  line-height: 4rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.line4_font {
+  width: 60rpx;
+  height: 4rpx;
+  background-color: #050505;
+  margin-right: 10rpx;
+}
+
+.line4_font1 {
+  width: 60rpx;
+  height: 4rpx;
+  background-color: #999;
+  margin-left: 10rpx;
+}
+
+.line_content {
+  /* margin-top: 10rpx; */
+  overflow-y: auto;
+}
+
+.line5 {
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  color: #050505;
+}
+
+.line6 {
+  margin-top: 20rpx;
+  clear: both;
+}
+
+.line6_view {
+  width: 25%;
+  float: left;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  
+  line-height: 94rpx;
+  text-align: center;
+}
+
+.line6_view1 {
+  float: left;
+  width: 34rpx;
+ 
+  text-align: center;
+}
+
+.line6_font {
+  font-size: 36rpx;
+  color: #f8b551;
+  height: 36rpx;
+    
+}
+
+.line6_font1 {
+  font-size: 28rpx;
+  color: #f8b551;
+  height: 28rpx;
+
+}
+
+.line6_font2 {
+  width: 1rpx;
+  height: 30rpx;
+  margin-left: 17rpx;
+  background-color: #999;
+   
+}
+
+.line6_font3 {
+  width: 1rpx;
+  height: 30rpx;
+  margin-left: 17rpx;
+  background-color: #999;
+   
+}
+
+.line6_img {
+  width: 34rpx;
+  height: 34rpx;
+  
+}
+
+.line6_font4 {
+  float: left;
+  height: 94rpx;
+  line-height: 94rpx;
+  color: #f8b551;
+  font-size: 32rpx;
+  margin-left: 5%;
+}

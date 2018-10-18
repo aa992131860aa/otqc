@@ -1,0 +1,108 @@
+<view class='content'>
+  <image bindtap='clickMap' bindtap='skipMap' mode='scaleToFill' class='img' src='../img/cloud_1index_bg.png'></image>
+  <image class='line1_img' mode='scaleToFill' bindtap='skipMap'  src='../img/{{img}}.png'></image>
+  <view bindtap='skipMap'  class='line1'>
+
+
+    <view class='line1_font'>{{organ}}</view>
+
+    <view class='line1_font1'>{{organSeg}}</view>
+    <view class='line1_font2'>{{date}}</view>
+  </view>
+
+  <view class='location' bindtap='skipMap' >
+
+    <view class='start' style='margin-top:{{zone1==""?"30":"0"}}rpx'>{{city}}</view>
+    <view class='end' style='margin-top:{{zone2==""?"30":"0"}}rpx'>{{city2}}</view>
+  </view>
+
+  <view class='location_child' bindtap='skipMap' >
+    <view class='child_start'>{{zone}}</view>
+    <view class='child_end'>{{zone2}}</view>
+  </view>
+
+  <canvas  bindtap='skipMap' style='width:700rpx;' class='canvas_heart' canvas-id='myCanvas'></canvas>
+
+  <view class='line2' bindtap='skipMap' >
+    <image mode='scaleToFill' src='../img/cloud_2detail_1h2.png' class='line2_img'></image>
+    <view class='line2_font'>{{startWeather}} {{startTemperature}} ℃</view>
+    <image mode='scaleToFill' src='../img/cloud_2detail_1h2.png' class='line2_img1'></image>
+    <view class='line2_font1'>{{endWeather}} {{endTemperature}} ℃</view>
+  </view>
+
+  <view class='line3'>
+    <view class='line3_font {{base1==true?"active":""}}' bindtap='clickOne' data-index='1'>基础参数</view>
+    <view class='line3_font  {{base2==true?"active":""}}' bindtap='clickOne' data-index='2'>转运参数</view>
+    <view class='line3_font  {{base3==true?"active":""}}' bindtap='clickOne' data-index='3'>修复参数</view>
+    <view class='line3_font  {{base4==true?"active":""}}' bindtap='clickOne' data-index='4'>其他参数</view>
+  </view>
+
+  <image mode='scaleToFill' src='../img/cloud_2detail_2bg.png' class='line4_img1 img_left{{img_left}}'></image>
+  <view class='line4'>
+    <view class='line4_line'></view>
+    <view class='line4_line1'></view>
+    <view class='line4_line2' style='display:{{hide3==true?"none":"block"}}'></view>
+
+    <view class='line4_inner'  bindtap='clickTwo' data-index='1'>
+
+      <view class='line4_font {{select1==true?"red":"green"}}'  bindtap='clickTwo' data-index='1'>{{font1}}</view>
+      <view class='line4_font1' bindtap='clickTwo' data-index='1'>
+        <image   bindtap='clickTwo' data-index='1' mode='scaleToFill' class='line4_img' src='../img/{{img1}}.png'></image>
+        <text   bindtap='clickTwo' data-index='1' class=' {{select1==true?"red":"green"}}'>{{num1}}</text>
+      </view>
+    </view>
+
+
+    <view class='line4_inner {{select2==true?"red":"green"}}' bindtap='clickTwo' data-index='2'>
+
+      <view class='line4_font' bindtap='clickTwo' data-index='2'>{{font2}}</view>
+      <view class='line4_font1' bindtap='clickTwo' data-index='2'>
+        <image bindtap='clickTwo' data-index='2' mode='scaleToFill' class='line4_img' src='../img/{{img2}}.png'></image>
+        <text bindtap='clickTwo' data-index='2' class=' {{select2==true?"red":"green"}}'>{{num2}}</text>
+      </view>
+    </view>
+
+
+    <view style='display:{{hide3==true?"none":""}}' class='line4_inner {{select3==true?"red":"green"}}' bindtap='clickTwo' data-index='3'>
+
+      <view class='line4_font' bindtap='clickTwo' data-index='3'>{{font3}}</view>
+      <view class='line4_font1' bindtap='clickTwo' data-index='3'>
+        <image bindtap='clickTwo' data-index='3' mode='scaleToFill' class='line4_img' src='../img/{{img3}}.png'></image>
+        <text bindtap='clickTwo' data-index='3' class=' {{select3==true?"red":"green"}}'>{{num3}}</text>
+      </view>
+    </view>
+
+
+    <view style='display:{{hide4==true?"none":""}}' class='line4_inner {{select4==true?"red":"green"}}' bindtap='clickTwo' data-index='4'>
+
+      <view bindtap='clickTwo' data-index='4' class='line4_font'>{{font4}}</view>
+      <view class='line4_font1' bindtap='clickTwo' data-index='4'>
+        <image bindtap='clickTwo' data-index='4' mode='scaleToFill' class='line4_img' src='../img/{{img4}}.png'></image>
+        <text bindtap='clickTwo' data-index='4' class=' {{select4==true?"red":"green"}}'>{{num4}}</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+  <view class='line5' style='height:{{webHeight}}rpx;display:{{no_content==true?"none":"block"}}'>
+    <ec-canvas class='canvas' id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+  <view class='line6' style='height:{{webHeight}}rpx;display:{{loading==true?"block":"none"}}'>
+    <view class="loading_box" style='margin-top:{{(webHeight-0)/2-28}}rpx;'>
+      <view class="loading3 loading3_1"></view>
+      <view class="loading3 loading3_2"></view>
+      <view class="loading3 loading3_3"></view>
+    </view>
+
+  </view>
+
+  <view class='line7' style='height:{{webHeight}}rpx;display:{{no_content==true?"block":"none"}}'>
+    <image class='line7_img' mode='scaleToFill' src='../img/cloud_nodata.png'></image>
+    <view class='line7_font'>暂无数据!!!</view>
+  </view>
+
+
+</view>

@@ -1,0 +1,34 @@
+<view class='content'>
+
+  <view class='view1'>
+    <text class='view1_text'>头像</text>
+    <image mode='scaleToFill' class='view1_img' src='{{wechatUrl}}'></image>
+  </view>
+  <view style='background-color:#fff'>
+
+    <view class='view2'>
+      <text class='view2_text'>姓名</text>
+      <text class='view2_text1'>{{trueName}}</text>
+    </view>
+    <view class='line'></view>
+
+    <view class='view2'>
+      <text class='view2_text'>手机</text>
+      <text class='view2_text1'>{{phone}}</text>
+    </view>
+    <view class='line'></view>
+
+    <view class='view2'>
+      <text class='view2_text'>所属医院</text>
+      <text class='view2_text1'>{{hospitalName}}</text>
+    </view>
+    <view class='line'></view>
+
+
+    <view class='view2'>
+      <text class='view2_text'>角色</text>
+      <text class='view2_text1'>{{roleName}}</text>
+    </view>
+   
+  </view>
+</view>

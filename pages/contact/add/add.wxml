@@ -1,0 +1,25 @@
+<view class='content'>
+  <view class='view1'>
+    <view class='view1_v'>
+      <image mode='scaleToFill' class='view1_img' src='../../img/newtrs_table3_start.png'></image>
+      <input bindinput='serachInput' class='view1_input'></input>
+    </view>
+    <view class='search' hover-class='search_hover' bindtap='searchClick'>搜索</view>
+  </view>
+  <view wx:for="{{list}}">
+    <view class='content1'>
+      <view class='view2'>
+        <image mode='scaleToFill' src='{{item.is_upload_photo=="0"?item.wechat_url:item.photo_url}}' class='view2_img'></image>
+        <view class='view3'>
+          <view class='view4'>{{item.true_name}}</view>
+          <view class='view5'>{{item.name}}</view>
+        </view>
+        <view style='display:{{item.is_friend==0?"none":"block"}}' data-other-id='{{item.other_id}}' data-target-phone='{{item.phone}}' class='view6' hover-class='view6_hover' bindtap='addClick' >添加</view>
+      </view>
+
+      <view class='line'></view>
+    </view>
+  </view>
+
+
+</view>

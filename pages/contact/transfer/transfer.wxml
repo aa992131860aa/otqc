@@ -1,0 +1,19 @@
+<view class='content'>
+  <view wx:for="{{list}}">
+    <view class='line1' hover-class='line1_hover'>
+
+      <image class='link_img' mode='scaleToFill' src='../../img/{{item.url}}.png'> </image>
+
+
+      <view class='link_font'>{{item.groupName}}</view>
+      <view class='link_length'>{{item.date}}</view>
+    </view>
+    <view class='line2'></view>
+  </view>
+</view>
+
+
+<view class='no_content' style='display:{{noContent==true?"block":"none"}}'>
+  <image class='no_content_img' mode='scaleToFill' src='../../img/cloud_emoji.png'></image>
+  <view class='no_content_font'>暂无转运组</view>
+</view>

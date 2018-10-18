@@ -1,0 +1,72 @@
+<view class='content'>
+
+  <navigator class='info' url='../my/info/info'>
+    <image mode='scaleToFill' class='photo' src='{{wechatUrl}}'></image>
+    <view class='name'>{{name}}</view>
+    <view class='otqc'>
+      <view>
+        公众号绑定码：
+      </view>
+      <view>{{otqcPhone}}</view>
+      <view class='otqc_btn' catchtap='btn_otqc'>复制绑定码</view>
+    </view>
+  </navigator>
+
+  <view class='space'></view>
+
+  <navigator class='item' url='../my/work/work'>
+    <image mode='scaleToFill' class='icon' src='../img/mine_1index_work.png'></image>
+    <view class='title'>工作量统计</view>
+
+  </navigator>
+  <view class='line'>
+    <view class='line_inner'></view>
+  </view>
+  <navigator class='item' url='../my/statistics/statistics'>
+    <image mode='scaleToFill' class='icon' src='../img/mine_1index_lishi.png'></image>
+    <view class='title'>转运统计</view>
+
+  </navigator>
+  <view class='line'>
+    <view class='line_inner'></view>
+  </view>
+  <navigator class='item' url='../my/report/report'>
+    <image mode='scaleToFill' class='icon' src='../img/mine_1index_pdf.png'></image>
+    <view class='title'>转运报告</view>
+
+  </navigator>
+
+
+  <view class='space'></view>
+
+  <navigator class='item' url='../my/use/use'>
+    <image mode='scaleToFill' class='icon' src='../img/mine_1index_map.png'></image>
+    <view class='title'>使用指南</view>
+
+  </navigator>
+  <view class='line'>
+    <view class='line_inner'></view>
+  </view>
+  <navigator class='item' url='../my/custom/custom'>
+    <image mode='scaleToFill' class='icon' src='../img/mine_1index_service.png'></image>
+    <view class='title'>我的客服</view>
+
+  </navigator>
+  <view class='line'>
+    <view class='line_inner'></view>
+  </view>
+  <navigator class='item' url='../my/about/about'>
+    <image mode='scaleToFill' class='icon' src='../img/mine_1index_home.png'></image>
+    <view class='title'>关于我们</view>
+
+  </navigator>
+
+  <view class='space'></view>
+
+  <navigator class='item' url='../my/site/site'>
+    <image mode='scaleToFill' class='icon' src='../img/mine_1index_setting.png'></image>
+    <view class='title'>设置</view>
+
+  </navigator>
+
+</view>

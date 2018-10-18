@@ -1,0 +1,67 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/contact/info/info",
+    "pages/login/login",
+    "pages/contact/add/add",
+    "pages/create/mode/mode",
+    "pages/create/preview/preview",
+    "pages/create/four/four",
+    "pages/create/three/three",
+    "pages/create/two/two",
+    "pages/create/first/first",
+    "pages/map/map",
+    "pages/detail/detail",
+    "pages/line/line",
+    "pages/me/me",
+    "pages/my/work/work",
+    "pages/my/statistics/statistics",
+    "pages/message/message",
+    "pages/contact/contact/contact",
+    "pages/contact/transfer/transfer",
+    "pages/link/link",
+    "pages/hospital/hospital",
+    "pages/test/test",
+    "pages/my/about/about",
+    "pages/my/custom/custom",
+    "pages/my/info/info",
+    "pages/my/feedback/feedback",
+    "pages/my/report/report",
+    "pages/my/site/site",
+    "pages/my/use/use",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#1d4499",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#1d4499",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "云监控",
+        "iconPath": "pages/img/nav_1cloud.png",
+        "selectedIconPath": "pages/img/nav_1cloud_on.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "通讯录",
+        "iconPath": "pages/img/nav_2msg.png",
+        "selectedIconPath": "pages/img/nav_2msg_on.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "pages/img/nav_5mine.png",
+        "selectedIconPath": "pages/img/nav_5mine_on.png"
+      }
+    ]
+  }
+}

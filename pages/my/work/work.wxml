@@ -1,0 +1,25 @@
+<view class='content'>
+  <image mode='scaleToFill' src='../../img/mine_5work_bg.png' class='img'></image>
+  <view class='line1'>{{year}}年{{month}}月</view>
+  <view class='line2'>
+    <image class='line2_img' mode='scaleToFill' bindtap='clickLeft' src='../../img/{{left==true?"mine_5work_left":"mine_5work_left_no"}}.png'></image>
+    <view class='line2_font'>
+      <text class='font_text'>总计</text>
+      <text class='font_text1'>{{totalAll}}</text>
+      <text class='font_text2'>次   当月</text>
+      <text class='font_text3'>{{totalMonth}} </text>
+      <text class='font_text4'>次 </text>
+    </view>
+    <image class='line2_img1' mode='scaleToFill' bindtap='clickRight' src='../../img/{{right==true?"mine_5work_right":"mine_5work_right_no"}}.png'></image>
+  </view>
+
+  <view class='content1'>
+    <view wx:for="{{list}}">
+      <view class='line3'>
+        <view class='line3_font'>{{item.postRole}}</view>
+        <view class='line3_font1'>{{item.count}}</view>
+      </view>
+
+    </view>
+  </view>
+</view>

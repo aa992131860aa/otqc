@@ -1,0 +1,8 @@
+<view class='content'>
+
+  <image class='custom_img' mode='scaleToFill' src='../../img/mine_4kefu.png'></image>
+  <view class='line2' hover-class='line2_hover' bindtap='call'>
+    <image class='line_img' mode='scaleToFill' src='../../img/mine_4kefu_phone.png'></image>
+    <view class='line_font'>0571-86792723</view>
+  </view>
+</view>

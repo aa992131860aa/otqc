@@ -1,0 +1,74 @@
+<view class='content'>
+
+  <view class='line1'>
+
+    <image mode='scaleToFill' src='../../img/newtrs_table1.png' class='line1_img'></image>
+  </view>
+
+
+  <view class='line2'>
+    <text class='line2_text'>选择设备</text>
+  </view>
+
+  <view class='line3'>
+    <input type='text' bindtap='clickBox' disabled='disabled' value='{{boxNo}}' class='line3_text'></input>
+  </view>
+
+  <view class='line4'>
+    <text class='line4_text' >器官段号(选填)</text>
+  </view>
+
+  <view class='line5'>
+    <input type='number' bindinput='organInput' class='line5_text' value='{{modifyOrganSeg}}'></input>
+  </view>
+  <view class='line6'>
+    <text style='color:#050505' class='line6_text'>获取时间</text>
+  </view>
+
+  <view class='line7'>
+    <!-- <input type='text' disabled='disabled' bindtap='clickTime' class='line7_text'></input> -->
+    <picker mode="time" value="{{date}}" bindchange="clickTime">
+      <view class="line7_text">
+        {{startTime}}
+      </view>
+    </picker>
+
+    <picker mode="date" value="{{date}}" bindchange="clickDate">
+      <view class="line7_text1">
+
+        {{startDate}}
+      </view>
+    </picker>
+
+  </view>
+
+  <view class='line8'>
+    <text style='color:#050505' class='line6_text'>设置开箱密码(选填)</text>
+  </view>
+
+  <view class='line9'>
+    <input type='text' disabled='disabled' class='line9_text'></input>
+    <input type='text' disabled='disabled' class='line9_text1'></input>
+    <input type='text' disabled='disabled' class='line9_text2'></input>
+    <input type='text' disabled='disabled' class='line9_text3'></input>
+  </view>
+
+  <view class='line10' bindtap='clickNext'>
+    下一步
+  </view>
+
+  <view bindtap='clickCancel' style='display: {{isToast==true?"block":"none"}}' class='toast'>
+
+  </view>
+  <view style='height:{{toastHeight}}px;top:{{top}}px;display: {{isToast==true?"block":"none"}}' class='toast_content'>
+    <view class='line11'>请选择可用设备编号</view>
+    <view class='line12'></view>
+    <view wx:for="{{boxList}}">
+      <view class='line13' bindtap='selectBox' data-b='{{item.boxNo}}' data-status='{{item.status}}'>
+        <text style='color:#{{item.status=="使用中"?"ccc":"050505"}}' class='line13_text'>{{item.boxNo}}</text>
+        <text style='color:#{{item.status=="使用中"?"ccc":"050505"}}' class='line13_text1'>{{item.status}}</text>
+      </view>
+      <view class='line14'></view>
+    </view>
+  </view>
+</view>

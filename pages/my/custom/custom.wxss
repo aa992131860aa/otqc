@@ -1,0 +1,28 @@
+.custom_img{
+  margin-top: 40rpx;
+  width: 460rpx;
+  height: 278rpx;
+  margin-left: 195rpx;
+}
+.line2{
+  border-radius: 8rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 60rpx;
+  height: 80rpx;
+  background-color: #1d4499;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line2_hover{
+  background: #d7d7d7;
+}
+
+.line_img{
+  width: 60rpx;
+  height: 60rpx;
+}
+.line_font{
+  color: #fff;
+}

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page-top {{open ? 'page-top-show' : ''}}">
+    <view class="nav-list" wx:for-items="{{nav_list}}" bindtap="open_list" data-title="{{item}}">
+      <text>{{item}}</text>
+    </view>
+  </view>
+  <view class="page-bottom">
+    <image class="off-nav-list" bindtap="off_canvas" src="../../img/cloud_1index_yun_black.png"></image>
+    <view class="page-bottom-content">
+      <text>{{text}}</text>
+    </view>
+    <view class="page-mask {{open ? '' : 'page-mask-hide'}}" bindtap="off_canvas"></view>
+  </view>
+</view>

@@ -1,0 +1,107 @@
+<view class='content'>
+
+  <image mode='scaleToFill' class='img' src='../../img/newtrs_table2.png'></image>
+
+  <view class='line1'>
+    <text class='line1_text'>器官</text>
+    <view class='line1_view'>
+      <image mode='scaleToFill' bindtap='clickMinus' data-index='1' class='line1_img' src='../../img/newtrs_table2_minus.png'></image>
+      <text class='line1_text1'>{{organNum}}</text>
+      <image mode='scaleToFill' bindtap='clickPlus' data-index='1' class='line1_img1' src='../../img/newtrs_table2_plus.png'></image>
+    </view>
+  </view>
+
+  <view class='line2'>
+    <view class='line2_view' bindtap='clickOrgan' data-o='心脏'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{organ1}}.png'></image>
+      <view class='line2_font {{font1}}'>心脏</view>
+    </view>
+    <view class='line2_view' bindtap='clickOrgan' data-o='肝脏'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{organ2}}.png'></image>
+      <view class='line2_font {{font2}}'>肝脏</view>
+    </view>
+    <view class='line2_view' bindtap='clickOrgan' data-o='肺'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{organ3}}.png'></image>
+      <view class='line2_font {{font3}}'>肺</view>
+    </view>
+    <view class='line2_view' bindtap='clickOrgan' data-o='肾脏'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{organ4}}.png'></image>
+      <view class='line2_font {{font4}}'>肾脏</view>
+    </view>
+    <view class='line2_view' bindtap='clickOrgan' data-o='胰脏'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{organ5}}.png'></image>
+      <view class='line2_font {{font5}}'>胰脏</view>
+    </view>
+    <view class='line2_view' bindtap='clickOrgan' data-o='眼角膜'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{organ6}}.png'></image>
+      <view class='line2_font {{font6}}'>眼角膜</view>
+    </view>
+  </view>
+
+  <view class='line3'>
+
+  </view>
+
+
+  <view class='line1'>
+    <text class='line1_text'>血液</text>
+    <view class='line1_view'>
+      <image mode='scaleToFill' bindtap='clickMinus' data-index='2' class='line1_img' src='../../img/newtrs_table2_minus.png'></image>
+      <text class='line1_text1'>{{bloodNum}}</text>
+      <image mode='scaleToFill' class='line1_img1' src='../../img/newtrs_table2_plus.png' bindtap='clickPlus' data-index='2'></image>
+    </view>
+  </view>
+
+  <view class='line2'>
+    <view class='line4_view' bindtap='clickBlood' data-b='a'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{blood1}}.png'></image>
+
+    </view>
+    <view class='line4_view' bindtap='clickBlood' data-b='b'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{blood2}}.png'></image>
+
+    </view>
+    <view class='line4_view' bindtap='clickBlood' data-b='ab'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{blood3}}.png'></image>
+
+    </view>
+    <view class='line4_view' bindtap='clickBlood' data-b='o'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{blood4}}.png'></image>
+
+    </view>
+
+  </view>
+
+  <view class='line3'>
+
+  </view>
+
+  <view class='line1'>
+    <text class='line1_text'>组织样本</text>
+    <view class='line1_view'>
+      <image mode='scaleToFill' bindtap='clickMinus' data-index='3' class='line1_img' src='../../img/newtrs_table2_minus.png'></image>
+      <text class='line1_text1'>{{sampleNum}}</text>
+      <image mode='scaleToFill' class='line1_img1' src='../../img/newtrs_table2_plus.png' bindtap='clickPlus' data-index='3'></image>
+    </view>
+  </view>
+  <view class='line2'>
+    <view class='line5_view' bindtap='clickSample' data-s='脾脏'>
+      <image mode='scaleToFill' class='line5_img' src='../../img/{{sample1}}.png'></image>
+
+    </view>
+    <view class='line5_view' bindtap='clickSample' data-s='血管'>
+      <image mode='scaleToFill' class='line5_img' src='../../img/{{sample2}}.png'></image>
+
+    </view>
+
+
+  </view>
+
+
+
+  <view class='foot'>
+    <view class='pre' bindtap='clickPre'>上一步</view>
+    <view class='next' bindtap='clickNext'>下一步</view>
+  </view>
+
+</view>

@@ -1,0 +1,41 @@
+<view class='content'>
+  <image mode='scaleToFill' src='../../img/newtrs_table3.png' class='img'></image>
+
+  <view class='line1'>转运地点</view>
+  <view class='line2'>
+    <view class='line3'>
+      <text class='line3_text'>起始地</text>
+      <input class='line3_input' bindinput='inputFromCity' placeholder='当前位置' value='{{fromCity}}'></input>
+    </view>
+    <view class='line3'>
+      <text class='line3_text'>目的地</text>
+      <text class='line3_input' bindtap='selectHospital'>{{hospitalName}}</text>
+    </view>
+  </view>
+
+  <view class='line4'></view>
+  <view class='line1'>转运方式</view>
+  <view class='line5'>
+    <view class='line4_view' bindtap='clickMethod' data-b='飞机'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{method1}}.png'></image>
+    </view>
+    <view class='line4_view' bindtap='clickMethod' data-b='火车'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{method2}}.png'></image>
+    </view>
+    <view class='line4_view' bindtap='clickMethod' data-b='救护车'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{method3}}.png'></image>
+    </view>
+    <view class='line4_view' bindtap='clickMethod' data-b='其他'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/{{method4}}.png'></image>
+    </view>
+  </view>
+  <view class='line6'>
+    <text class='line6_text'>航班/车号(选填)</text>
+    <input class='line6_input' bindinput='inputNo' value='{{no}}'> </input>
+  </view>
+
+  <view class='foot'>
+    <view class='pre' bindtap='clickPre'>上一步</view>
+    <view class='next' bindtap='clickNext'>下一步</view>
+  </view>
+</view>

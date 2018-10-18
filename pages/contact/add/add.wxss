@@ -1,0 +1,105 @@
+.view1 {
+  padding-top: 10rpx;
+  background-color: #fff;
+  height: 100rpx;
+  margin-bottom: 10rpx;
+}
+
+.view1_v {
+  width: 540rpx;
+  border: #e5e5e5 solid 1rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+  float: left;
+  border-radius: 8rpx;
+}
+
+.search {
+  width: 130rpx;
+  margin-left: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  color: #1d4499;
+  float: left;
+  background-color: #fff;
+  border: #d7d7d7 solid 1rpx;
+}
+
+.search_hover {
+  background-color: #e5e5e5;
+}
+
+.view1_img {
+  float: left;
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 18rpx;
+  margin-left: 10rpx;
+}
+
+.view1_input {
+     
+  padding-left: 10rpx;
+  float: left;
+  height: 80rpx;
+}
+
+.content1 {
+  background-color: #fff;
+
+}
+
+.view2 {
+  height: 200rpx;
+}
+
+.view2_img {
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-left: 32rpx;
+  margin-top: 40rpx;
+}
+
+.line {
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  height: 1rpx;
+  background-color: #d7d7d7;
+}
+
+.view3 {
+  margin-top: 50rpx;
+  float: left;
+  height: 80rpx;
+  position: relative;
+  margin-left: 30rpx;
+}
+
+.view4 {
+  font-size: 32rpx;
+  color: #050505;
+}
+
+.view5 {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 30rpx;
+}
+
+.view6 {
+  margin-top: 64rpx;
+  margin-right: 30rpx;
+  width: 140rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  float: right;
+  background-color: #3ebb8c;
+  border-radius: 6rpx;
+  font-size: 32rpx;
+  color: #fff;
+}

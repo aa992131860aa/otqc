@@ -1,0 +1,80 @@
+.info {
+  margin-top: 30rpx;
+  background-color: #fff;
+  height: 160rpx;
+}
+
+.photo {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 32rpx;
+  margin-top: 20rpx;
+  float: left;
+  border-radius: 50%;
+}
+
+.name {
+  margin-left: 20rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  color: #050505;
+  float: left;
+}
+
+.otqc {
+  margin-top: 20rpx;
+  margin-left: 120rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #050505;
+  float: left;
+  font-size: 30rpx;
+}
+.otqc_btn{
+    font-size: 24rpx;
+    background-color: #1d4499;
+    color: white;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    border-radius: 10rpx;
+}
+.space {
+  height: 30rpx;
+}
+
+.item {
+  height: 100rpx;
+  background-color: #fff;
+}
+
+.icon {
+  float: left;
+  margin-top: 22rpx;
+  margin-left: 32rpx;
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.title {
+  margin-left: 20rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #050505;
+  float: left;
+}
+
+.line {
+  height: 1rpx;
+  background-color: #fff;
+}
+
+.line_inner {
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  height: 1rpx;
+  background-color: #d7d7d7;
+}

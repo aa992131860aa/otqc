@@ -1,0 +1,49 @@
+<view class='content'>
+
+  <map markers='{{markers}}' longitude='{{longitude}}' latitude='{{latitude}}' include-points='{{includ_points}}' polyline='{{polyline}}' style='height:{{mapHeight}}rpx' class='map'></map>
+  <view style='height:{{infoHeight}}rpx' class='info' >
+   <view bindtap='clickInfo'>
+    <view class='line1'>
+      <image class='line1_img' mode='scaleToFill' src='../img/cloud_4location_up.png'></image>
+    </view>
+    <view class='line2'>
+      <text class='line2_font'>上海</text>
+      <view class='line2_font1'></view>
+      <text class='line2_font2'>杭州</text>
+    </view>
+    <view class='line3'>
+      <text class='line3_font'>器官:肝脏</text>
+      <text class='line3_font1'>剩余直线距离:100k</text>
+    </view>
+    <view class='line4'>
+      <view class='line4_font'></view>
+      <view class='line4_font1'></view>
+    </view>
+</view>
+
+    <view style='display:{{left==true?"block":"none"}};height:{{leftHeight}}rpx;' class='line_content'>
+      <view class='line5'>
+        异常情况
+      </view>
+      <view wx:for="{{info}}">
+        <view class='line6'>
+
+          <view class='line6_view'>
+            <view class='line6_font' style='display:{{item.date==true?"block":"none"}}'>
+              {{item.month}}
+            </view>
+            <view class='line6_font1' style='color:{{item.line_color}}'>
+              {{item.time}}
+            </view>
+          </view>
+          <view class='line6_view1'>
+            <view class='line6_font2' style='display:{{item.line1==true?"block":"block;background-color:#fff"}}'></view>
+            <image class='line6_img' mode='scaleToFill' src='../img/{{item.dot}}.png'></image>
+            <view class='line6_font3' style='display:{{item.line2==true?"block":"none"}}'></view>
+          </view>
+          <view style='font-size:{{item.line}}rpx;color:{{item.line_color}}' class='line6_font4'>{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

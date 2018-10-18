@@ -1,0 +1,72 @@
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 379rpx;
+}
+
+.view1 {
+  height: 80rpx;
+  margin-top: 20rpx;
+  width: 100%;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #050505;
+  margin-left: 40rpx;
+}
+
+.view2 {
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 520rpx;
+  margin-left: 115rpx;
+  border: #999 solid 1rpx;
+  border-radius: 8rpx;
+  font-size: 36rpx;
+  color: #f72361;
+  padding-left: 20rpx;
+}
+
+.view3{
+  height: 1rpx;
+  width: 100%;  
+  background-color: #d7d7d7;
+  margin-top: 20rpx;
+}
+
+
+
+
+
+
+
+.foot {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+ 
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #1d4499;
+
+}
+.pre{
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #1d4499;
+  border-top: #1d4499 solid 1rpx;
+  background-color: #fff;
+}
+.next{
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #fff;
+}

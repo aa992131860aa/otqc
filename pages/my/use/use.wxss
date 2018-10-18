@@ -1,0 +1,4 @@
+.content_img{
+  width: 100%;
+  height: 3330rpx;
+}

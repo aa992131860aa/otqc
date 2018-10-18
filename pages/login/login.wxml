@@ -1,0 +1,49 @@
+<view class='content'>
+  <form >
+    <view class='identity'>
+      <image mode='scaleToFill' class='identity_img' src='../img/login_identity.png'></image>
+    </view>
+    <view class='warning'>
+      <view>请进行实名认证,</view>
+      <view>以保证所有信息的真实可靠,谢谢</view>
+    </view>
+
+    <view class='space'></view>
+
+
+    <view class='middle_content'>
+      <text class='true_name'>真实姓名</text>
+      <!-- auto-focus -->
+      <input class='input_content' bindinput='trueNameInput' value='{{trueName}}' type='text' name='true_name' />
+      <view class='line'></view>
+    </view>
+
+    <view class='middle_content'>
+      <text class='true_name'>手机号码</text>
+      <input class='input_content' bindinput='phoneInput' value='{{phone}}' type='number' name='phone' />
+      <view class='line'></view>
+    </view>
+
+    <view class='middle_content'>
+      <text class='true_name'>所属医院</text>
+      <navigator url='../hospital/hospital' class='hospital'>
+        {{hospitalName}}
+
+      </navigator>
+      <view class='line'></view>
+    </view>
+
+    <view class='middle_content'>
+      <text class='true_name'>角色选择</text>
+
+      <view class='hospital' bindtap='selectRole'> {{roleName}} </view>
+      <view class='line'></view>
+    </view>
+
+
+    <view class='space'></view>
+
+    <button  class='finish' open-type="getUserInfo" bindgetuserinfo="finishBind" hover-class='finish_on'>完成</button>
+
+  </form>
+</view>

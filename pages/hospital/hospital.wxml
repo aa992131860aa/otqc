@@ -1,0 +1,22 @@
+<view>
+  <view class='left'>
+
+    <!-- {{hospital}} -->
+    <block wx:for="{{hospital}}">
+      <block wx:if="{{index==current_id || (current_id==0&&index==0)}}">
+        <view style='background-color:#fff;color:#f72361' class='content_left' bindtap='click_hospital' data-name='{{item}}' data-id='{{index}}'> {{item}}</view>
+      </block>
+      <block wx:else>
+        <view class='content_left' bindtap='click_hospital' data-name='{{item}}' data-id='{{index}}'>{{item}}</view>
+      </block>
+    </block>
+  </view>
+  <view class='right' style='height:{{realHeight}}rpx'>
+    <view class='right_inner'>
+      <block wx:for="{{detail}}">
+        <view class='content_right' bindtap='selectHospital' data-name='{{item}}'>{{item}}</view>
+        <view class='line'></view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,142 @@
+<!--<canvas bindtap='createTransfer'   class='create_canvas' canvas-id='create'>
+ 
+  <cover-view class='create1'>
+
+  <cover-image style='display:block'  src='../img/nav_3newtrs.png' class='create'></cover-image>
+</cover-view> 
+ </canvas>  -->
+<view class='content_all' style='display:{{noContent==false?"block":"none"}}'>
+  <!-- <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}rpx;"
+  class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll"
+  > -->
+
+
+
+  <view wx:for="{{list}}">
+
+    <view bindtouchstart="bindTouchStart" data-index='{{index}}' data-box-no='{{item.boxNo}}' bindtouchend="bindTouchEnd" class='content' bindlongtap='skipDetailLong' hover-class='content_hover' bindtap='skipDetail' data-organ-seg='{{item.organSeg}}' data-status='{{item.status}}'
+      data-show='{{(item.isStart==0&&item.status=="transfering")}}'>
+
+      <view class='line1'>
+        <image mode='scaleToFill' class='no_img' src='../img/{{item.status=="done"?"cloud_1index_id_black.png":"cloud_1index_id.png"}}'></image>
+        <view class='no'>{{item.modifyOrganSeg==''?item.organSeg:item.modifyOrganSeg}}</view>
+        <image mode='scaleToFill' class='auto' src='../img/{{item.autoTransfer==0?"cloud_1index_auto_black.png":"cloud_1index_auto.png"}}'></image>
+        <view class='status' style='color:#{{item.status=="done"?"999":"3ebb8c"}}'>{{item.status=="done"?"已完成":"转运中"}}</view>
+      </view>
+      <view class='line2'>
+        <view class='organ'>
+          <image class='organ_img' mode='scaleToFill' src='../img/{{item.url}}.png'></image>
+          <view class='organ_font'>{{item.organ}}</view>
+        </view>
+        <view class='blood'>
+          <image class='blood_img' mode='scaleToFill' src='../img/{{item.status=="done"?"cloud_1index_blood_black.png":"cloud_1index_blood.png"}}'></image>
+          <view class='blood_font'>{{item.blood}}</view>
+        </view>
+      </view>
+
+      <view class='line3'>
+        <view class='transfer'>
+          <image class='transfer_img' mode='scaleToFill' src='../img/{{item.status=="done"?"cloud_1index_yun_black.png":"cloud_1index_yun.png"}}'></image>
+          <view class='transfer_font'>{{item.trueName}}</view>
+        </view>
+
+        <view class='transfer'>
+          <image class='transfer_img' mode='scaleToFill' src='../img/{{item.status=="done"?"cloud_1index_yun_black.png":"cloud_1index_yun.png"}}'></image>
+          <view class='transfer_font'>{{item.contactName}}</view>
+        </view>
+
+
+
+        <view class='call' style='border:#{{item.status=="done"?"999 solid 2rpx":"3ebb8c solid 2rpx"}}'>
+          <image class='call_img' mode='scaleToFill' src='../img/{{item.status=="done"?"cloud_1index_phone_black.png":"cloud_1index_phone.png"}}'></image>
+          <view class='call_font'>快速拨号</view>
+        </view>
+      </view>
+
+      <view class='line4'>
+        <image class='map' mode='scaleToFill' src='../img/{{item.status=="done"?"cloud_1index_bg_black.png":"cloud_1index_bg.png"}}' />
+        <view class='box'>
+          <image mode='scaleToFill' class='box_img' src='../img/{{item.status=="done"?"cloud_1index_box_black.png":"cloud_1index_box.png"}}'></image>
+          <view class='box_font' style='color:#{{item.status=="done"?"999":"24b8f8"}}'>{{item.boxNo}}</view>
+        </view>
+
+        <view class='time'>
+          <image mode='scaleToFill' class='time_img' src='../img/{{item.status=="done"?"cloud_1index_time_black.png":"cloud_1index_time.png"}}'></image>
+          <view class='time_font' style='color:#{{item.status=="done"?"999":"24b8f8"}}'>{{item.time}}</view>
+        </view>
+
+        <view class='location'>
+
+          <view class='start' style='margin-top:{{item.zone1==""?"30":"0"}}rpx'>{{item.city}}</view>
+          <view class='end' style='margin-top:{{item.zone2==""?"30":"0"}}rpx'>{{item.city2}}</view>
+        </view>
+
+        <view class='location_child'>
+          <view class='child_start'>{{item.zone}}</view>
+          <view class='child_end'>{{item.zone2}}</view>
+        </view>
+
+        <view>
+          <canvas style='width:700rpx;' class='canvas_heart' canvas-id='c{{item.organSeg}}'></canvas>
+        </view>
+
+      </view>
+
+      <view class='line5'>
+        <image class='line5_img' mode='scaleToFill' src='../img/{{item.status=="done"?"cloud_1index_location_black.png":"cloud_1index_location.png"}}'></image>
+        <view class='line5_font' style='color:#{{item.status=="done"?"999":"f8b551"}}'>{{item.status=="done"?item.getTime+" 已完成转运":item.getTime+" 转运中"}}</view>
+      </view>
+
+      <view class='{{(item.isStart==0&&item.status=="transfering")?"no_start":"no_start1"}}'>
+
+      </view>
+
+      <view class='{{(item.isStart==0&&item.status=="transfering")?"no_start_show":"no_start1"}}'>
+        <image bindtap='startClick' data-index='{{index}}' data-organ-seg='{{item.organSeg}}' mode='scaleToFill' src='../img/cloud_6start_start.png' class='{{(item.isStart==0&&item.status=="transfering")?"no_start_img":"no_start_img1"}}'></image>
+        <image bindtap='delClick' data-phone='{{item.phone}}' data-organ-seg='{{item.organSeg}}' mode='scaleToFill' src='../img/cloud_6start_delete.png' class='del'></image>
+        <image bindtap='modifyClick' data-phone='{{item.phone}}' data-organ-seg='{{item.organSeg}}' mode='scaleToFill' src='../img/cloud_6start_edit.png' class='modify'></image>
+      </view>
+    </view>
+
+  </view>
+
+
+  <!-- </scroll-view> -->
+  <!-- <view class="body-view">
+    <loading hidden="{{hidden}} " bindchange="loadingChange ">
+      加载中...
+    </loading>
+  </view> -->
+
+</view>
+<view class='no_content' style='display:{{noContent==true?"block":"none"}}'>
+  <image class='no_content_img' mode='scaleToFill' src='../img/cloud_emoji.png'></image>
+  <view class='no_content_font'>本页暂时还没有内容，快去创建吧！</view>
+  <!-- <canvas style='' class='create_canvas' canvas-id='create'></canvas>  -->
+</view>
+
+
+<image style='display:block' bindtap='createTransfer' src='../img/nav_3newtrs.png' class='create'></image>
+
+
+
+
+<view class='toast' style='display:{{isCreate==true?"block":"none"}}'>
+
+</view>
+<view class='toast_content' style='display:{{isCreate==true?"block":"none"}}'>
+  <view class='toast1'>
+    <image mode='scaleToFill' src='../img/newtrs_popup_ok.png' class='toast1_img'></image>
+    <text class='toast1_text'>创建成功</text>
+  </view>
+  <view class='toast2'> 转运已创建成功,是否开始转运?</view>
+  <view class='toast3'>
+    【温馨提示】本次转运直线距离为{{distance}}km,此时目的地{{fromCity}}气温为{{weather}},{{temperature}}℃,祝转运顺利!
+  </view>
+  <view class='toast4'></view>
+  <view class='toast8'>
+    <view class='toast5' bindtap='konwClick'>稍后开始</view>
+    <view class='toast6'></view>
+    <view class='toast7' bindtap='goStart'>立即开始</view>
+  </view>
+</view>

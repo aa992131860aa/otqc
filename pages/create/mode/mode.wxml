@@ -1,0 +1,16 @@
+<view class='content'>
+ <view class='line1'>
+  <image mode='scaleToFill' src='../../img/newtrs_new_express.png' class='line1_img'></image>
+ </view>
+  
+  <view class='line2' hover-class='line2_hover' bindtap='handle'>
+      <image mode='scaleToFill' class='line2_img' src='../../img/newtrs_new_pen.png'></image>
+      <text class='line2_font'>手动转运</text> 
+  </view>
+
+    
+  <view class='line3' hover-class='line3_hover' bindtap='scan'>
+      <image mode='scaleToFill' class='line3_img' src='../../img/newtrs_new_sao.png'></image>
+      <text class='line3_font'>扫描输入</text> 
+  </view>
+</view>

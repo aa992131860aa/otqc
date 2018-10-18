@@ -1,0 +1,7 @@
+<view class='content'>
+ 
+   <image mode='scaleToFill' src='../../img/mine_logo.png' class='logo_img'></image>
+   <view class='logo_font'>器官云监控</view>
+   <view class='line3' hover-class='line3_hover' bindtap='skipFeedback'>反馈</view>
+   <view class='line4'>《器官云监控软件许可及服务协议》</view>
+</view>
